@@ -13,6 +13,10 @@
                 "STREAMLIT_SERVER_ENABLE_WEBSOCKET_ORIGIN_CHECK": "false"
             }
         }
-    ]
+    ],
+    "deploy": {
+        "startCommand": "streamlit run app.py --server.port $PORT --server.address 0.0.0.0",
+        "buildCommand": "pip install -r requirements.txt"
+    }
 }
 
